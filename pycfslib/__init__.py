@@ -340,8 +340,8 @@ def qc_cfs(cfs_file, threshold = 10):
     if np.any(qc):
         status = True
         for i in idx:
-            failed_channels += electrodes[i]
-        message = "The following channel(s) failed quality checks:" + failed_channels
+            failed_channels += electrodes[i] + ", "
+        message = "The following channel(s) failed quality checks: " + failed_channels 
 
     return status, quality, message
 
@@ -365,7 +365,7 @@ def qc_stream(bytestream, threshold = 10):
     if np.any(qc):
         status = True
         for i in idx:
-            failed_channels += electrodes[i]
-        message = "The following channel(s) failed quality checks:" + failed_channels
+            failed_channels += electrodes[i] + ", "
+        message = "The following channel(s) failed quality checks: " + failed_channels
 
     return status, quality, message
