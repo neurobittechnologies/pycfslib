@@ -29,10 +29,9 @@ import numpy as np
 from io import BytesIO
 from skimage.measure import block_reduce
 from scipy.signal import firwin, lfilter, resample_poly, stft
-from numba import jit
 
 
-@jit
+
 def create_stream_v2(C3, C4, EOGL, EOGR, EMG, sampling_rates, compressionbit=True, hashbit=True, check_quality = True):
     SRATE = 100  # Hz
     LOWPASS = 35.0  # Hz
@@ -141,7 +140,7 @@ def save_stream_v2(file_name, C3, C4, EOGL, EOGR, EMG, sampling_rates, compressi
     return stream
 
 
-@jit
+
 def create_stream(EEG_data, sampling_rate, compressionbit=True, hashbit=True, check_quality=True):
     warnings.warn('You are using version 1 of CFS, CFS version 1 is deprecated and will not be supported by Z3Score in the future.', RuntimeWarning)
     SRATE = 100 #Hz

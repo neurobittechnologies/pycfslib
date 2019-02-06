@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='pycfslib',
-      version='1.3',
+      version='1.4',
       description='Library to read, write amd create CFS file and stream, now supports the NEO sleep staging system.',
       url='https://github.com/neurobittechnologies/pycfslib',
       author='Amiya Patanaik',
@@ -12,6 +12,5 @@ setup(name='pycfslib',
           'numpy',
           'scikit-image',
           'scipy',
-          'numba',
       ],
       zip_safe=False)
